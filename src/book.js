@@ -8,7 +8,7 @@ export function loadBook() {
   intro.innerHTML =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ";
 
-  bookingForm.innerHTML = `
+  bookingForm.innerHTML = `<div>
         <label for="table-number">Table Number:</label>
         <input type="number" id="table-number" name="table-number" required>
         <label for="personNumber">For:</label>
@@ -20,7 +20,8 @@ export function loadBook() {
         </select>
         <label for="date">Select Date:</label>
         <input type="date" id="date" name="date" required>
-        <button type="submit">Book Now</button>`;
+        <button type="submit">Book Now</button>
+        </div>`;
 
   logo.classList.add("moveLogo");
 

@@ -101,6 +101,7 @@ nav {
 .BookingOpacity {
   opacity: 1;
 }
+
 .bookingContainer form {
   margin-top: 4rem;
   background-color: #161616c4;
@@ -108,9 +109,15 @@ nav {
   height: 150px;
   border-radius: 21px;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
+.bookingContainer form > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 50px;
+}
+
 .bookingContainer form input,
 select,
 label {
