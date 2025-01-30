@@ -1,16 +1,22 @@
-export function loadBook() {
-  const intro = document.createElement("div");
-  const bookingForm = document.createElement("form");
-  const logo = document.getElementsByTagName("h1")[0];
-  const container = document.createElement("div");
+// create new dom elements
+const intro = document.createElement("div");
+const bookingForm = document.createElement("form");
+const container = document.createElement("div");
 
+export function loadBook() {
+  // logo animation
+  const logo = document.getElementsByTagName("h1")[0];
+  logo.classList.remove("moveLogoSmaller");
+  logo.classList.add("moveLogo");
+
+  // booking intro and form
   intro.classList.add("intro");
   intro.innerHTML =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ";
 
   bookingForm.innerHTML = `<div>
-        <label for="table-number">Table Number:</label>
-        <input type="number" id="table-number" name="table-number" required>
+        <label for="tableNumber">Table Number:</label>
+        <input type="number" id="tableNumber" name="tableNumber" required>
         <label for="personNumber">For:</label>
         <select id="personNumber" name="personNumber">
             <option value="1">One</option>
@@ -23,14 +29,12 @@ export function loadBook() {
         <button type="submit">Book Now</button>
         </div>`;
 
-  logo.classList.add("moveLogo");
-
   container.classList.add("bookingContainer");
-
+  //for showing it smoothly
   setTimeout(() => {
     container.classList.add("BookingOpacity");
   }, 500);
-
+  //merging in one div
   container.append(intro, bookingForm);
   return container;
 }

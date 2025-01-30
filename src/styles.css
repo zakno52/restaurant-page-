@@ -88,9 +88,14 @@ nav {
   transform: translateY(-25%) !important;
   transition: 1s;
 }
+.moveLogoSmaller {
+  font-size: 5rem !important;
+  transition: 1s;
+}
 
 .bookingContainer {
   width: auto;
+  margin-top: 5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -118,23 +123,36 @@ nav {
   margin: 0 50px;
 }
 
+.bookingContainer form label {
+  margin-right: 10px;
+  font-weight: bold;
+}
 .bookingContainer form input,
-select,
-label {
+select {
+  outline: none;
+  border-radius: 10px;
   margin-right: 30px;
+  height: 30px;
+  padding: 2px 10px;
+  font-size: 1.2rem;
+  background-color: #fffffff2;
+}
+#tableNumber {
+  width: 150px;
 }
 .bookingContainer form button {
-  height: 30px;
+  height: 50px;
   width: 150px;
   border-radius: 50px;
   border: none;
-  background-color: aliceblue;
+  background-color: #fffffff2;
   color: #1b1b1b;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bolder;
   cursor: pointer;
 }
 .intro {
   font-size: 2rem;
   width: 50%;
+  line-height: 3rem;
 }
