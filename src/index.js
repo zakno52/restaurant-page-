@@ -1,26 +1,35 @@
 import "./styles.css";
+// Import all functions
+import { loadHero } from "./hero.js";
+// import { loadHome} from './Home.js';
+// import { loadMenu } from './menu.js';
+// import { loadAbout } from './About.js';
 
-const pages = (function name(params) {
+const pageModule = (function () {
   // variables
-  const navButton = document.querySelectorAll(".center");
+  const navButtons = document.querySelectorAll(".center");
   const output = document.getElementById("content");
-  // variables-creatElements
-  const heroLogo = document.createElement("h1");
-  heroLogo.innerHTML = "ELYSIAN";
-  // Events
-  navButton.forEach((button, index) => {
-    button.addEventListener("click", () => showPage(index));
-  });
-
-  //handlers
+  output.append(loadHero());
+  // Private Methods
   function showPage(index) {
     if (index === 0) {
-      heroLogo.classList.add("logo");
-      output.append(heroLogo);
+      loadHome();
     }
     if (index === 1) {
+      loadMenu();
     }
     if (index === 2) {
+      loadAbout();
     }
   }
+
+  // Events
+  function _setupEventListeners() {
+    navButtons.forEach((button, index) => {
+      button.addEventListener("click", () => showPage(index));
+    });
+  }
+
+  // Initialize module
+  _setupEventListeners();
 })();
