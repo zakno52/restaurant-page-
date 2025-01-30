@@ -10,24 +10,23 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  color: white;
 }
 
+header {
+  background-color: #1b1b1b;
+}
 nav {
+  width: 100vw;
+  height: 100px;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#content h1 {
-  position: relative;
-  top: 50%;
-  font-size: 17rem;
-  letter-spacing: 9px;
-}
 .nav-links {
   display: flex;
   align-items: center;
-
   padding: 20px 15px;
 }
 .nav-links li {
@@ -35,9 +34,9 @@ nav {
   margin: 0 12px;
 }
 .nav-links li a {
+  color: white;
   position: relative;
-  color: #333;
-  font-size: 20px;
+  font-size: 2.3rem;
   font-weight: 500;
   padding: 6px 0;
   text-decoration: none;
@@ -49,7 +48,7 @@ nav {
   left: 0;
   height: 3px;
   width: 0%;
-  background: #333;
+  background: white;
   border-radius: 12px;
   transition: all 0.4s ease;
 }
@@ -59,4 +58,76 @@ nav {
 .nav-links li.center a:before {
   left: 50%;
   transform: translateX(-50%);
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("img/heroImg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#content h1 {
+  position: absolute;
+  font-size: clamp(4rem, 17vw, 24rem);
+  top: 40%;
+  transform: translateY(0%);
+  letter-spacing: 38px;
+  text-align: center;
+  z-index: 1;
+}
+.moveLogo {
+  font-size: clamp(4rem, 17vw, 17rem) !important;
+  top: 20% !important;
+  transform: translateY(-25%) !important;
+  transition: 1s;
+}
+
+.bookingContainer {
+  width: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-out;
+}
+.BookingOpacity {
+  opacity: 1;
+}
+.bookingContainer form {
+  margin-top: 4rem;
+  background-color: #161616c4;
+  font-size: 2rem;
+  height: 150px;
+  border-radius: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bookingContainer form input,
+select,
+label {
+  margin-right: 30px;
+}
+.bookingContainer form button {
+  height: 30px;
+  width: 150px;
+  border-radius: 50px;
+  border: none;
+  background-color: aliceblue;
+  color: #1b1b1b;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.intro {
+  font-size: 2rem;
+  width: 50%;
 }

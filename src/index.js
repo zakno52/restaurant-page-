@@ -1,7 +1,7 @@
 import "./styles.css";
 // Import all functions
 import { loadHero } from "./hero.js";
-// import { loadHome} from './Home.js';
+import { loadBook } from "./book.js";
 // import { loadMenu } from './menu.js';
 // import { loadAbout } from './About.js';
 
@@ -13,7 +13,7 @@ const pageModule = (function () {
   // Private Methods
   function showPage(index) {
     if (index === 0) {
-      loadHome();
+      output.append(loadBook());
     }
     if (index === 1) {
       loadMenu();
@@ -30,6 +30,6 @@ const pageModule = (function () {
     });
   }
 
-  // Initialize module
+  // Events - Initialize module
   _setupEventListeners();
 })();
