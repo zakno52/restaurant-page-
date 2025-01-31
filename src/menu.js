@@ -56,7 +56,8 @@ export function loadMenu() {
   container.innerHTML = "";
   // logo animation
   const logo = document.querySelector("h1");
-  logo.classList.add("moveLogoSmaller");
+  logo.classList.add("logoAnimation2");
+  logo.classList.remove("logoAnimation3");
   logo.nextElementSibling?.remove();
 
   //prettier-ignore

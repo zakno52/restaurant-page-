@@ -83,17 +83,21 @@ nav {
   text-align: center;
   z-index: 1;
 }
-.moveLogo {
+.logoAnimation1 {
   font-size: clamp(4rem, 17vw, 7rem) !important;
   top: 20% !important;
   transform: translateY(-25%) !important;
   transition: 1s;
 }
-.moveLogoSmaller {
+.logoAnimation2 {
   top: 15% !important;
   font-size: 2.5rem !important;
   transition: 1s;
   letter-spacing: 20px !important;
+}
+.logoAnimation3 {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff,
+    0 0 120px #fff;
 }
 
 .bookingContainer {

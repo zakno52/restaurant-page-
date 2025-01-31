@@ -3,7 +3,7 @@ import "./styles.css";
 import { loadHero } from "./hero.js";
 import { loadBook } from "./book.js";
 import { loadMenu } from "./menu.js";
-// import { loadAbout } from './About.js';
+import { loadAbout } from "./about.js";
 
 const pageModule = (function () {
   // variables
@@ -20,7 +20,7 @@ const pageModule = (function () {
       output.append(loadMenu());
     }
     if (index === 2) {
-      loadAbout();
+      output.append(loadAbout());
     }
   }
 

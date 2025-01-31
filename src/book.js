@@ -7,8 +7,9 @@ export function loadBook() {
   // logo animation
   const logo = document.querySelector("h1");
   logo.nextElementSibling?.remove();
-  logo.classList.remove("moveLogoSmaller");
-  logo.classList.add("moveLogo");
+  logo.classList.remove("logoAnimation2");
+  logo.classList.remove("logoAnimation3");
+  logo.classList.add("logoAnimation1");
 
   // booking intro and form
   intro.classList.add("intro");
