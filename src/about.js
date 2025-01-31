@@ -1,3 +1,8 @@
+import img1 from "./img/11.jpg";
+import img2 from "./img/22.jpg";
+import img3 from "./img/33.jpg";
+import chefImg from "./img/chef.jpg";
+
 const container = document.createElement("div");
 container.classList.add("aboutContainer");
 
