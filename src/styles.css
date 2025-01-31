@@ -159,8 +159,92 @@ select {
   width: 50%;
   line-height: 30px;
 }
-
-.dishImg {
+.dishContainer {
+  padding: 8rem 8rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100vw;
+  justify-items: center;
+  align-items: start;
+}
+.dishBox {
+  max-height: 150px;
+  max-width: 400px;
+  background-color: #1b1b1bbb;
+  border-radius: 21px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dishBox > .dishImg {
   height: 100px;
   width: 100px;
+  border-radius: 21px;
+}
+.dishBox > .dishInfo {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dishBox > .dishInfo > .dishName {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.dishBox > .dishInfo > .dishDesc {
+  font-size: 0.7rem;
+  line-height: 20px;
+}
+.dishBox > .dishInfo > .dishPrice {
+  font-size: 1.2rem;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.specialDishBox {
+  grid-area: 1/1/4/2;
+  height: 480px;
+  max-width: 400px;
+  background-color: #1b1b1bbb;
+  border-radius: 21px;
+  padding: 20px 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.speacialDishTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.speacialDishImg {
+  width: 270px;
+  border-radius: 21px;
+}
+.speacialDishInfo {
+  padding: 0 20px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.speacialDishName {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.speacialDishDesc {
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+.speacialDishPrice {
+  font-size: 1.5rem;
+  align-self: flex-end;
+  margin-top: 1rem;
 }
