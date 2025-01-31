@@ -18,11 +18,12 @@ header {
 }
 nav {
   width: 100vw;
-  height: 100px;
-  margin-top: 1rem;
+  height: 50px;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .nav-links {
   display: flex;
@@ -36,7 +37,7 @@ nav {
 .nav-links li a {
   color: white;
   position: relative;
-  font-size: 2.3rem;
+  font-size: 1.3rem;
   font-weight: 500;
   padding: 6px 0;
   text-decoration: none;
@@ -75,7 +76,7 @@ nav {
 
 #content h1 {
   position: absolute;
-  font-size: clamp(4rem, 17vw, 24rem);
+  font-size: clamp(4rem, 17vw, 12rem);
   top: 40%;
   transform: translateY(0%);
   letter-spacing: 38px;
@@ -83,14 +84,16 @@ nav {
   z-index: 1;
 }
 .moveLogo {
-  font-size: clamp(4rem, 17vw, 17rem) !important;
+  font-size: clamp(4rem, 17vw, 7rem) !important;
   top: 20% !important;
   transform: translateY(-25%) !important;
   transition: 1s;
 }
 .moveLogoSmaller {
-  font-size: 5rem !important;
+  top: 15% !important;
+  font-size: 2.5rem !important;
   transition: 1s;
+  letter-spacing: 20px !important;
 }
 
 .bookingContainer {
@@ -110,8 +113,7 @@ nav {
 .bookingContainer form {
   margin-top: 4rem;
   background-color: #161616c4;
-  font-size: 2rem;
-  height: 150px;
+  height: 100px;
   border-radius: 21px;
   display: flex;
   justify-content: center;
@@ -120,7 +122,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 50px;
+  margin: 0 30px;
 }
 
 .bookingContainer form label {
@@ -129,30 +131,36 @@ nav {
 }
 .bookingContainer form input,
 select {
+  border: none;
   outline: none;
   border-radius: 10px;
   margin-right: 30px;
   height: 30px;
   padding: 2px 10px;
-  font-size: 1.2rem;
+
   background-color: #fffffff2;
 }
 #tableNumber {
   width: 150px;
 }
 .bookingContainer form button {
-  height: 50px;
-  width: 150px;
+  height: 40px;
+  width: 120px;
   border-radius: 50px;
   border: none;
   background-color: #fffffff2;
   color: #1b1b1b;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: bolder;
   cursor: pointer;
 }
 .intro {
-  font-size: 2rem;
+  font-size: 1.2rem;
   width: 50%;
-  line-height: 3rem;
+  line-height: 30px;
+}
+
+.dishImg {
+  height: 100px;
+  width: 100px;
 }

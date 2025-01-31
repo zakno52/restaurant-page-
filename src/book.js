@@ -5,7 +5,8 @@ const container = document.createElement("div");
 
 export function loadBook() {
   // logo animation
-  const logo = document.getElementsByTagName("h1")[0];
+  const logo = document.querySelector("h1");
+  logo.nextElementSibling?.remove();
   logo.classList.remove("moveLogoSmaller");
   logo.classList.add("moveLogo");
 
