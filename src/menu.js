@@ -76,5 +76,9 @@ export function loadMenu() {
     new Dish(img3,"Name", "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 5),
   ];
 
+  setTimeout(() => {
+    container.style.opacity = "1";
+  }, 500);
+
   return container;
 }

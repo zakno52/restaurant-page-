@@ -14,12 +14,15 @@ const pageModule = (function () {
   // Private Methods
   function showPage(index) {
     if (index === 0) {
+      output.style.minHeight = "calc(100vh - 70px)";
       output.append(loadBook());
     }
     if (index === 1) {
+      output.style.minHeight = "unset";
       output.append(loadMenu());
     }
     if (index === 2) {
+      output.style.minHeight = "unset";
       output.append(loadAbout());
     }
   }

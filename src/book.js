@@ -34,7 +34,7 @@ export function loadBook() {
   container.classList.add("bookingContainer");
   //for showing it smoothly
   setTimeout(() => {
-    container.classList.add("BookingOpacity");
+    container.style.opacity = "1";
   }, 500);
   //merging in one div
   container.append(intro, bookingForm);
